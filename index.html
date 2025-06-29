@@ -3,7 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <script type="module" src="main.js" defer></script>
+    <title>PodcastApp</title>
   </head>
-  <body></body>
+  <body>
+    <header class="app-header">
+      <div class="logo-title">
+        <img src="assets/logo.png" alt="Podcast Logo" class="logo-icon" />
+        <h1>PodcastApp</h1>
+      </div>
+      <div class="header-controls">
+        <img src="assets/search.png" alt="Search" class="icon search-icon" />
+        <img src="assets/user.png" alt="User" class="icon user-icon" />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="filters">
+        <label for="genreFilter" class="filter-label">Filter by:</label>
+        <select id="genreFilter" class="filter-select">
+          <option value="all">All Genres</option>
+        </select>
+
+        <select id="sortFilter" class="filter-select">
+          <option value="recent">Recently Updated</option>
+          <option value="popular">Most Popular</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+
+      <!------------------------- Web Components --------------------------->
+      <section id="podcastList" class="podcast-grid"></section>
+    </main>
+
+    <!------------------------- Modal --------------------------->
+    <div id="podcastModal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <h2 id="modalTitle">Podcast Title</h2>
+
+        <div class="modal-header">
+          <img
+            id="modalImage"
+            src=""
+            alt="Large Cover Image"
+            class="modal-image"
+          />
+          <div class="modal-info">
+            <section class="modal-section">
+              <h3>Description</h3>
+              <p id="modalDescription" class="modal-description"></p>
+            </section>
+
+            <section class="modal-section">
+              <h3>Genres</h3>
+              <div class="genres" id="modalGenres"></div>
+            </section>
+
+            <p class="updated-date" id="modalUpdated"></p>
+          </div>
+        </div>
+
+        <section class="modal-section">
+          <h3>Seasons</h3>
+          <div id="modalSeasons"></div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
