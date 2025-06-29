@@ -1,5 +1,3 @@
-// scripts/components/PodcastPreview.js
-
 import { genres } from "../initialData/data.js";
 import { formatTimeAgo } from "../utils/time.js";
 
