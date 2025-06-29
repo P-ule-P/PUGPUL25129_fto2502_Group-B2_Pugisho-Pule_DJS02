@@ -1,5 +1,3 @@
-// scripts/utils/genreUtils.js
-
 import { genres } from "../initialData/data.js";
 
 /**
